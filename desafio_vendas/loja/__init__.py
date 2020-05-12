@@ -1,5 +1,5 @@
-from .Cliente import Cliente
-from .Vendedor import Vendedor
-from .Compra import Compra
+from .cliente import Cliente
+from .vendedor import Vendedor
+from .compra import Compra
 
 __all__ = ['Cliente', 'Vendedor', 'Compra']
