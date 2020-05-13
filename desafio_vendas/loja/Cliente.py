@@ -1,4 +1,8 @@
-from .Pessoa import Pessoa
+from .pessoa import Pessoa
+
+
+def get_data(compra):
+    return compra.data
 
 
 class Cliente(Pessoa):
@@ -9,3 +13,13 @@ class Cliente(Pessoa):
 
     def registrar_compra(self, compra):
         self.compras.append(compra)
+
+    def get_data_ultima_compra(self):
+        return None if not self.compras else \
+            sorted(self.compras, key=get_data)[-1].data
+
+    def total_compras(self):
+        total = 0
+        for compra in self.compras:
+            total += compra.valor
+        return total
