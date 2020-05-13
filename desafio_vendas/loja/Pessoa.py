@@ -1,8 +1,5 @@
 class Pessoa:
 
-    nome = ''
-    idade = 0
-
     def __init__(self, nome, idade):
         self.nome = nome
         self.idade = idade
@@ -17,6 +14,7 @@ class Pessoa:
             print('Menor de idade')
 
 
+'''
 def main():
     nome = input('Digite o nome: ')
     idade = int(input('Digite a idade: '))
@@ -27,3 +25,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+'''
