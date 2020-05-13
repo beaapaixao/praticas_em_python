@@ -1,11 +1,8 @@
-from .Pessoa import Pessoa
+from .pessoa import Pessoa
 
 
 class Vendedor(Pessoa):
 
-    salario = 0
-
-
-def __init__(self, nome, idade, salario):
-    super().__init__(nome, idade)
-    self.salario = salario
+    def __init__(self, nome, idade, salario):
+        super().__init__(nome, idade)
+        self.salario = salario
