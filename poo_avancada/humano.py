@@ -6,10 +6,12 @@ class Humano:
         self.nome = nome
         self._idade = None
 
-    def get_idade():
+    @property
+    def idade(self):
         return self._idade
 
-    def set_idade(self, idade):
+    @idade.setter
+    def idade(self, idade):
         if idade < 0:
             raise ValueError('Idade deve ser um número positivo')
         else:
@@ -41,7 +43,11 @@ class HomoSapiens(Humano):
 if __name__ == '__main__':
     José = HomoSapiens('José')
     Pedro = Neardental('Pedro')
+    # José.set_idade(-40) para simular o tratamento de exceção com o ValueError
     print(f'Evolução a partir da class: {", ".join(HomoSapiens.especies())}')
     print(f'Evolução a partir da instancia:{", ".join(José.especies())}')
     print(f'Homo Sapiens é evoluído? {HomoSapiens.is_evoluido()}')
     print(f'Neanderthal é evoluído? {Neardental.is_evoluido()}')
+
+    José.idade = 40
+    print(f'Nome: {José.nome} Idade: {José.idade}')
