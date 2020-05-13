@@ -4,6 +4,16 @@ class Humano:
 
     def __init__(self, nome):
         self.nome = nome
+        self._idade = None
+
+    def get_idade():
+        return self._idade
+
+    def set_idade(self, idade):
+        if idade < 0:
+            raise ValueError('Idade deve ser um número positivo')
+        else:
+            self._idade = idade
 
     def das_cavernas(self):
         self.especie = 'Homo Neandherthalensis'
